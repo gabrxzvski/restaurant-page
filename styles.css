@@ -1,0 +1,156 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #c1c1c1;
+}
+
+#content {
+    width: 100vw;
+    height: 100vh;
+    background: url("images/background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-list {
+    height: 80px;
+    background: rgba(0, 0, 0, .75);
+    box-shadow: 0px 0px 5px #606060;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.nav-item1,
+.nav-item2,
+.nav-item3 {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-item1 a::after,
+.nav-item2 a::after,
+.nav-item3 a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background:#fcb971;
+    transition: width 0.3s;
+}
+
+.nav-item1 a:hover::after,
+.nav-item2 a:hover::after,
+.nav-item3 a:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+
+.nav-item1 a,
+.nav-item2 a,
+.nav-item3 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #c1c1c1;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.nav-item1 a:hover,
+.nav-item2 a:hover,
+.nav-item3 a:hover {
+    color: #fcb971;
+    transition: .7s;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 85vh;
+}
+
+.menu {
+    display: grid;
+    height: 600px;
+    grid-template-columns: repeat(2, 700px);
+    grid-template-rows: repeat(3, 150px);
+    justify-content: center;
+    margin: 10px;
+    row-gap: 100px;
+    column-gap: 100px;
+}
+
+.menu div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .50);
+    box-shadow: 0px 0px 8px #606060;
+}
+
+.menu img {
+    width: 100px;
+    height: 100px;
+}
+
+.description {
+    width: 400px;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min(350px, 70%);
+    width: min(1000px, 70%);
+    padding-top: 40px;
+    overflow: auto;
+    cursor: default;
+    background-color: rgba(0, 0, 0, .50);
+    box-shadow: 0px 0px 2px #606060;
+}
+
+.homepage p {
+    width: 800px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.homepage h1 {
+    font-weight: bolder;
+}
+
+.footer {
+    background: rgba(0, 0, 0, .75);
+    box-shadow: 0px 0px 3px #606060;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p, i, a {
+    text-decoration: none;
+    color: #c1c1c1;
+    cursor:default;
+    padding-right: 5px;
+}
+
+.footer i:hover {
+    cursor: pointer;
+    color: #fcb971;
+    transition: .5s;
+}
+
