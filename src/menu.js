@@ -1,7 +1,6 @@
-const DOM = (() => {
-    const content = document.getElementById('content');
-    const main = document.createElement('main');
-    main.className = 'main';
+const renderMenu = () => {
+
+    const main = document.getElementById('main');
     const menu = document.createElement('div');
     menu.className = 'menu';
 
@@ -65,71 +64,38 @@ const DOM = (() => {
     const menuItem6price = document.createElement('p');
     menuItem6price.textContent = '100$';
 
-    return {
-        content,
-        main,
-        menu,
-        menuItem1,
-        menuItem1Pic,
-        menuItem1description,
-        menuItem1price,
-        menuItem2,
-        menuItem2Pic,
-        menuItem2description,
-        menuItem2price,
-        menuItem3,
-        menuItem3Pic,
-        menuItem3description,
-        menuItem3price,
-        menuItem4,
-        menuItem4Pic,
-        menuItem4description,
-        menuItem4price,
-        menuItem5,
-        menuItem5Pic,
-        menuItem5description,
-        menuItem5price,
-        menuItem6,
-        menuItem6Pic,
-        menuItem6description,
-        menuItem6price
-    }
-})();
+    main.appendChild(menu);
 
-const renderMenu = () => {
-    DOM.content.appendChild(DOM.main);
-    DOM.main.appendChild(DOM.menu);
+    menu.appendChild(menuItem1);
+    menuItem1.appendChild(menuItem1Pic);
+    menuItem1.appendChild(menuItem1description);
+    menuItem1.appendChild(menuItem1price);
 
-    DOM.menu.appendChild(DOM.menuItem1);
-    DOM.menuItem1.appendChild(DOM.menuItem1Pic);
-    DOM.menuItem1.appendChild(DOM.menuItem1description);
-    DOM.menuItem1.appendChild(DOM.menuItem1price);
+    menu.appendChild(menuItem2);
+    menuItem2.appendChild(menuItem2Pic);
+    menuItem2.appendChild(menuItem2description);
+    menuItem2.appendChild(menuItem2price);
 
-    DOM.menu.appendChild(DOM.menuItem2);
-    DOM.menuItem2.appendChild(DOM.menuItem2Pic);
-    DOM.menuItem2.appendChild(DOM.menuItem2description);
-    DOM.menuItem2.appendChild(DOM.menuItem2price);
+    menu.appendChild(menuItem3);
+    menuItem3.appendChild(menuItem3Pic);
+    menuItem3.appendChild(menuItem3description);
+    menuItem3.appendChild(menuItem3price);
 
-    DOM.menu.appendChild(DOM.menuItem3);
-    DOM.menuItem3.appendChild(DOM.menuItem3Pic);
-    DOM.menuItem3.appendChild(DOM.menuItem3description);
-    DOM.menuItem3.appendChild(DOM.menuItem3price);
+    menu.appendChild(menuItem4);
+    menuItem4.appendChild(menuItem4Pic);
+    menuItem4.appendChild(menuItem4description);
+    menuItem4.appendChild(menuItem4price);
 
-    DOM.menu.appendChild(DOM.menuItem4);
-    DOM.menuItem4.appendChild(DOM.menuItem4Pic);
-    DOM.menuItem4.appendChild(DOM.menuItem4description);
-    DOM.menuItem4.appendChild(DOM.menuItem4price);
+    menu.appendChild(menuItem5);
+    menuItem5.appendChild(menuItem5Pic);
+    menuItem5.appendChild(menuItem5description);
+    menuItem5.appendChild(menuItem5price);
 
-    DOM.menu.appendChild(DOM.menuItem5);
-    DOM.menuItem5.appendChild(DOM.menuItem5Pic);
-    DOM.menuItem5.appendChild(DOM.menuItem5description);
-    DOM.menuItem5.appendChild(DOM.menuItem5price);
-
-    DOM.menu.appendChild(DOM.menuItem6);
-    DOM.menuItem6.appendChild(DOM.menuItem6Pic);
-    DOM.menuItem6.appendChild(DOM.menuItem6description);
-    DOM.menuItem6.appendChild(DOM.menuItem6price);
+    menu.appendChild(menuItem6);
+    menuItem6.appendChild(menuItem6Pic);
+    menuItem6.appendChild(menuItem6description);
+    menuItem6.appendChild(menuItem6price);
 
 };
 
-export default renderMenu;
+export { renderMenu };
