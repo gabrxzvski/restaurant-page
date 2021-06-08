@@ -1,4 +1,5 @@
-const DOM = (() => {
+const renderNavbar = () => {
+
     const content = document.getElementById('content');
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
@@ -19,29 +20,14 @@ const DOM = (() => {
     navItem3a.href = "#";
     navItem3a.textContent = "Contact";
 
-    return {
-        content,
-        nav,
-        ul,
-        navItem1,
-        navItem1a,
-        navItem2,
-        navItem2a,
-        navItem3,
-        navItem3a
-    }
-    
-})();
-
-const renderNavbar = () => {
-    DOM.content.appendChild(DOM.nav);
-    DOM.nav.appendChild(DOM.ul);
-    DOM.ul.appendChild(DOM.navItem1);
-    DOM.ul.appendChild(DOM.navItem2);
-    DOM.ul.appendChild(DOM.navItem3);
-    DOM.navItem1.appendChild(DOM.navItem1a);
-    DOM.navItem2.appendChild(DOM.navItem2a);
-    DOM.navItem3.appendChild(DOM.navItem3a);
+    content.appendChild(nav);
+    nav.appendChild(ul);
+    ul.appendChild(navItem1);
+    ul.appendChild(navItem2);
+    ul.appendChild(navItem3);
+    navItem1.appendChild(navItem1a);
+    navItem2.appendChild(navItem2a);
+    navItem3.appendChild(navItem3a);
 };
 
-export default renderNavbar;
+export { renderNavbar };
