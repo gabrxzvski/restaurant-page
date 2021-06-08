@@ -1,4 +1,5 @@
-const DOM = (() => {
+const renderFooter = () => {
+
     const content = document.getElementById('content');
     const footer = document.createElement('footer');
     footer.className = "footer";
@@ -11,20 +12,10 @@ const DOM = (() => {
     const iGithub = document.createElement('i');
     iGithub.className = "fab fa-github";
 
-    return {
-        content,
-        footer,
-        p,
-        aGithub,
-        iGithub
-    }
-})();
-
-const renderFooter = () => {
-    DOM.content.appendChild(DOM.footer);
-    DOM.footer.appendChild(DOM.p);
-    DOM.footer.appendChild(DOM.aGithub);
-    DOM.aGithub.appendChild(DOM.iGithub);
+    content.appendChild(footer);
+    footer.appendChild(p);
+    footer.appendChild(aGithub);
+    aGithub.appendChild(iGithub);
 };
 
-export default renderFooter;
+export { renderFooter };
