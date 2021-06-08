@@ -31,16 +31,13 @@ body {
     padding-top: 50px;
 }
 
-.nav-item1,
-.nav-item2,
-.nav-item3 {
+li {
     list-style: none;
     display: inline-block;
+    height: 20px;
 }
 
-.nav-item1 a::after,
-.nav-item2 a::after,
-.nav-item3 a::after {
+li a::after {
     content: '';
     display: block;
     width: 0;
@@ -49,16 +46,12 @@ body {
     transition: width 0.3s;
 }
 
-.nav-item1 a:hover::after,
-.nav-item2 a:hover::after,
-.nav-item3 a:hover::after {
-    width: 100%;
-    transition: .3s;
+li a:hover::after {
+    width: 90%;
+    transition: .5s;
 }
 
-.nav-item1 a,
-.nav-item2 a,
-.nav-item3 a {
+li a {
     cursor: pointer;
     text-decoration: none;
     color: #c1c1c1;
@@ -66,14 +59,12 @@ body {
     font-size: 16px;
 }
 
-.nav-item1 a:hover,
-.nav-item2 a:hover,
-.nav-item3 a:hover {
+li a:hover {
     color: #fcb971;
     transition: .7s;
 }
 
-.main {
+#main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +74,6 @@ body {
 
 .menu {
     display: grid;
-    height: 600px;
     grid-template-columns: repeat(2, 700px);
     grid-template-rows: repeat(3, 150px);
     justify-content: center;
