@@ -4,7 +4,7 @@
 
 This is a small project that i made using HTML, CSS and Javascript, i also used webpack and npm. In this project i made a restaurant page with a navbar with 3 sections, the Home, Menu and Contact, i added every html element on the page with javascript and DOM manipulation.
 
-#### **To see the live preview of this website [click here](https://gabrxzvski.github.io/restaurant-page/)**
+#### **To see the live preview of this website [click here](https://gabrxzvski.github.io/restaurant-page/)**.
 
 In this website you can navigate through 3 navbar sections, **Home**, **Menu** and **Contact**.
 - In the **Home** tab you will find a introduction section to **The Coffee Shop**.
