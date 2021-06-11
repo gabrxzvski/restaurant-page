@@ -65,7 +65,6 @@ const renderContact = () => {
   const submitBtn = document.createElement("button");
   submitBtn.type = "submit";
   submitBtn.id = "submitBtn";
-  submitBtn.setAttribute("form", "mailForm");
   submitBtn.textContent = "Submit";
 
   submitBtn.addEventListener("click", () => {
