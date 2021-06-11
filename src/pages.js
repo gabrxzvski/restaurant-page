@@ -38,7 +38,7 @@ const renderContent = () => {
   homeBtn.addEventListener("click", () => {
     removeAllChildNodes(main);
     renderHome();
-    selectedElement(homeBtnText, "#fcb971");
+    selectedElement(homeBtnText, "#e69b20");
     selectedElement(menuBtnText, "#c1c1c1");
     selectedElement(contactBtnText, "#c1c1c1");
   });
@@ -46,7 +46,7 @@ const renderContent = () => {
   menuBtn.addEventListener("click", () => {
     removeAllChildNodes(main);
     renderMenu();
-    selectedElement(menuBtnText, "#fcb971");
+    selectedElement(menuBtnText, "#e69b20");
     selectedElement(homeBtnText, "#c1c1c1");
     selectedElement(contactBtnText, "#c1c1c1");
   });
@@ -54,7 +54,7 @@ const renderContent = () => {
   contactBtn.addEventListener("click", () => {
     removeAllChildNodes(main);
     renderContact();
-    selectedElement(contactBtnText, "#fcb971");
+    selectedElement(contactBtnText, "#e69b20");
     selectedElement(menuBtnText, "#c1c1c1");
     selectedElement(homeBtnText, "#c1c1c1");
   });
