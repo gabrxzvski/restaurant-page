@@ -2,18 +2,31 @@
     box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
+    background: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
     color: #c1c1c1;
+    background-attachment: fixed;
 }
 
 #content {
     width: 100vw;
     height: 100vh;
-    background: url("images/background.jpg");
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,52 +47,39 @@ body {
 li {
     list-style: none;
     display: inline-block;
-    height: 20px;
-}
-
-li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background:#fcb971;
-    transition: width 0.3s;
-}
-
-li a:hover::after {
-    width: 90%;
-    transition: .5s;
 }
 
 li a {
+    display: inline-block;
     cursor: pointer;
     text-decoration: none;
     color: #c1c1c1;
-    font-weight: bolder;
-    font-size: 16px;
+    font-weight:900;
+    font-size: 18px;
+    transition: transform .4s;
 }
 
 li a:hover {
-    color: #fcb971;
-    transition: .7s;
+    transform: translateY(-30%);
 }
 
 #main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 85vh;
 }
 
 .menu {
     display: grid;
-    grid-template-columns: repeat(2, 700px);
-    grid-template-rows: repeat(3, 150px);
+    width: 100vw;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 700px));
+    grid-auto-rows: 150px;
     justify-content: center;
+    align-content: center;
     margin: 10px;
-    row-gap: 100px;
-    column-gap: 100px;
+    row-gap: 80px;
+    column-gap: 80px;
+    animation: fadeIn 1s;
 }
 
 .menu div {
@@ -91,8 +91,8 @@ li a:hover {
 }
 
 .menu img {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
 }
 
 .description {
@@ -103,13 +103,13 @@ li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: min(350px, 70%);
-    width: min(1000px, 70%);
+    height: 350px;
+    width: 1000px;
     padding-top: 40px;
-    overflow: auto;
     cursor: default;
     background-color: rgba(0, 0, 0, .50);
     box-shadow: 0px 0px 2px #606060;
+    animation: fadeIn 1s;
 }
 
 .homepage p {
@@ -120,6 +120,102 @@ li a:hover {
 
 .homepage h1 {
     font-weight: bolder;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    height: 700px;
+    width: 850px;
+    cursor: default;
+    background-color: rgba(0, 0, 0, .50);
+    box-shadow: 0px 0px 2px #606060;
+    animation: fadeIn 1s;
+}
+
+.contactDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+}
+
+.contactDiv img {
+    height: 32px;
+    width: 32px;
+    margin: 10px;
+}
+
+#mailForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 250px;
+    margin: 10px;
+}
+
+#mail {
+    font-size: 28px;
+}
+
+#mailImg {
+    height: 64px;
+    width: 64px;
+}
+
+#name, #email {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, .50);
+    color: #c1c1c1;
+    box-shadow: 0px 0px 2px #606060;
+}
+
+#message {
+    display: flex;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-bottom: 70px;
+    width: 450px;
+    height: 100px;
+    text-align: start;
+    padding-left: 5px;
+    padding-top: 5px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, .50);
+    color: #c1c1c1;
+    box-shadow: 0px 0px 2px #606060;
+}
+
+#submitBtn {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border: 1px solid #606060;
+    background: rgba(0, 0, 0, .30);
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color: #c1c1c1;
+    text-align:center;
+    transition: all 0.5s;
+    margin: 10px;
+}
+
+#submitBtn:hover {
+    background-color: rgba(0, 0, 0, .80);
+    box-shadow: 0 0 5px #606060;
+    border-color: #c0c0c0;
+    cursor: pointer;
 }
 
 .footer {
