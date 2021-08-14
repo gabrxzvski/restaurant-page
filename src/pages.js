@@ -34,6 +34,7 @@ const renderContent = () => {
   const menuBtnText = document.querySelector(".nav-item2 a");
   const contactBtn = document.querySelector(".nav-item3");
   const contactBtnText = document.querySelector(".nav-item3 a");
+  selectedElement(homeBtnText, "#e69b20");
 
   homeBtn.addEventListener("click", () => {
     removeAllChildNodes(main);
